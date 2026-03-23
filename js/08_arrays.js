@@ -34,3 +34,17 @@ console.log(newArr) //[3,4,5]
 
 myArr.splice(2,3) //array ko 2 index dekhi 3 ota value delete garidncha
 console.log(myArr) //[1,2,6,7,8]    
+
+
+const fruits2=["apple","banana","orange","grape","kiwi"]    
+const vegetable=["carrot","potato","tomato","onion","cabbage"]
+
+fruits2.push(vegetable) //fruits2 array ma vegetable array lai add garidncha
+//console.log(fruits2)
+
+fruits2.concat(vegetable) //fruits array ma vegetable array lai add garidncha but original fruits array ma change hudaina
+console.log(fruits2) //original fruits array ma change hudaina
+
+const another_array=[1,2,3,[4,5,6],7,[8],9,[6,[4,5]]] //array ma array pani rakhna sakincha
+const real_array=another_array.flat(Infinity) //array ma array lai flat method le single level ma rakhcha
+console.log(real_array) //[1,2,3,4,5,6,7,8,9,6,[4,5]]
