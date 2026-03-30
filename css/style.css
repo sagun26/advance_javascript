@@ -1,0 +1,19 @@
+.main_div{
+    width: 500px;
+    height:500 px;
+    background-color: lightblue;
+    padding: 10px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.div{
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    background-color: violet;
+    border: 2px solid black;
+    margin:2px;
+}
