@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Guess</title>
+    <style>
+        .main_div{
+            background-color: chartreuse;
+                width: 400px;
+            height: 200px;
+            margin: 100px auto;
+                padding: 10px;
+                border-color: #212121;
+                border-style: solid;
+            text-align: center;
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+             justify-content: center;
+
+        }
+         input{
+            padding: 10px;
+            font-size: 16px;
+        }
+        .div1{
+            margin-top: 20px;
+        }
+         button{
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #76d876;
+            border: none;
+            cursor: pointer;
+        }
+         button:hover{
+            background-color: #5cb85c;
+        }
+        .div2
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="main_div">
+        <h1>guess a number</h1>
+                
+        <div class="div2">
+            <input type="number" onclick="submit">
+        </div>
+        
+       <div class="div1">
+            <button id="submit"> Guess Number</button>
+       </div>
+       </div>
+</body>
+<script>
+      let random =Math.floor(Math.random()*100)+1;
+      
+   console.log(random);
+    attempts=10
+   const button=document.querySelector("#submit");
+   button.onclick=function(){
+    const guess=Number(document.querySelector("input").value);
+    if(guess===random){
+        alert("congrats")
+    }
+    else{
+        attempts--
+        if(attempts>0){
+         alert('wrong the number is '+(guess>random?"high":"low")+' you have '+attempts+" attempts left")
+        }
+        else{
+            alert("game over")
+        }
+    }
+
+   }
+</script>
+</html>

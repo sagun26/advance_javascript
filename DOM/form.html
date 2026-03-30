@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        .maindiv{
+            background-color: azure;
+            margin: auto;
+            padding: 20px;
+            align-items: center;
+            width: 200px;
+
+        }
+         body { 
+
+            background-color: #212121;
+
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+        label {
+    
+            display: block;
+            margin-top: 15px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+        }
+    </style>
+    <script src="formValidation.js"></script>
+</head>
+<body>
+    <div class="maindiv">
+    <label for="username"> 
+        <input type="name" placeholder=" enter your name" id="username" name="username">
+    </label>
+     
+    <label for="email">
+        <input type="email" placeholder="enter your email" name="email" id="email">
+    
+    </label> 
+     <label for="password">
+         <input type="password"placeholder="enter password" name="password" id="password">
+    
+    </label>
+     <label for="button">
+        <button type="submit"> submit</button>
+    </label> 
+</div>
+</body>
+</html>
