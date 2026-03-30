@@ -5,7 +5,7 @@ async function fetchposts(){
     try{
       const response= await fetch("https://jsonplaceholder.typicode.com/posts");
       if (!response.ok){ 
-         throw new error ("network response was not ok");
+         throw new Error ("network response was not ok");
       }
         const posts = await response.json();
         console.log(posts);

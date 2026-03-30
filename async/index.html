@@ -3,38 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random User Generator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 30px;
-        }
-        #profile img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-        }
-        #profile {
-            margin-top: 20px;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            margin-top: 20px;
-            cursor: pointer;
-        }
-    </style>
+    <title>Weather App</title>
 </head>
 <body>
+  <h1>Weather App</h1>
 
-    <h1>Random User Profile Generator</h1>
-    <button id="generateBtn">Generate User</button>
+  <input type="text" id="cityInput" placeholder="Enter city">
+  <button onclick="fetchWeather()">Get Weather</button>
 
-    <div id="profile">
-        <!-- User info will appear here -->
-    </div>
+  <div id="loading" style="display:none;">Loading weather.....</div>
+  <ul id="weatherList"></ul>
 
-    <script src="user.js"></script>
+  <script src="weather.js"></script> 
+  <script>
+    setInterval(function(){ console.log ("sagun")},3000)
+  </script>
+
 </body>
 </html>

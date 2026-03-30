@@ -25,5 +25,7 @@ loginUser("sagun",function(username){
             console.log(post);
 
     })
+
+    
 })
 });
