@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Asyncronous Flow</h1>
+<p>Asynchronous code finishes later.</p>
+
+<p>I will not return the result right away.</p>
+
+<p id="demo"></p>
+
+<script>
+let result;
+console.log("Before function")
+
+
+setTimeout(function() {
+
+  result = 5;
+  document.getElementById("demo").innerHTML = "The result is " + result;
+
+
+console.log("Inside function")
+}, 2000);
+console.log("After function");
+document.getElementById("demo").innerHTML = "The result is " + result;
+</script>
+
+</body>
+</html>

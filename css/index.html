@@ -4,14 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Add book</title>
 </head>
 <body>
 <div class="main_div">
-    <div class="div">Item 1</div>
-    <div class="div">Item 2</div>
+    <h1>Add a book</h1>
+    <div>
+        <label for="title">
+            <input type="text" id="title" name="title" placeholder="Title">
+        </label>    
+    </div>
+    <div>
+        <label for="author">
+            <input type="text" id="author" name="author" placeholder="Author">
+        </label>
+    </div>
+    <div>
+        <label for="published">
+            <input type="number" id="published" name="published">
+        </label>
+    </div>
+    <div>
+        <button id="btn" onclick="addBook()">Add Book</button>
+    </div>
+
 
 
 </div>    
 </body>
+<script>
+    function addBook(){
+        const title = document.getElementById("title").value;
+        const author = document.getElementById("author").value;
+        const published = document.getElementById("published").value;
+
+        const book = {
+            title,
+            author,
+            published
+        }
+
+        console.log(book);
+    }
+</script>
 </html>
