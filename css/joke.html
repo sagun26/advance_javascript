@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="joke-container">
+    <h1> click on the button  to get new joke </h1>
+    <button onclick="joke()" >get joke </button>
+    </div>
+    
+</body>
+ <script>
+    function joke(){
+   
+    let joke=fetch('jokes.json')   
+    console.log(joke);
+   // .then(response => response.json())
+    //.then(data => {
+      //  const jokeContainer = document.getElementById('joke-container');
+        //jokeContainer.innerHTML = `<h1>${data.joke}</h1>`;
+    //})
+
+    }
+ </script>
+</html>
