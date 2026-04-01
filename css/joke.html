@@ -8,15 +8,22 @@
 <body>
     <div id="joke-container">
     <h1> click on the button  to get new joke </h1>
-    <button onclick="joke()" >get joke </button>
+    <button onclick="joke()"> get joke </button>
     </div>
     
 </body>
  <script>
-    function joke(){
+    async function joke(){
    
-    let joke=fetch('jokes.json')   
-    console.log(joke);
+    const response = await fetch('https://official-joke-api.appspot.com/random_joke')   
+    const data = await response.json();
+     document.getElementById('joke-container').innerHTML = `<div id="joke">
+        <h1>${data.setup}</h1>
+        <p>${data.punchline}</p>
+     </div>
+        <button onclick="new_joke()">New joke</button>
+     `;
+    
    // .then(response => response.json())
     //.then(data => {
       //  const jokeContainer = document.getElementById('joke-container');
@@ -24,5 +31,16 @@
     //})
 
     }
+
+    async function new_joke(){
+        const response = await fetch('https://official-joke-api.appspot.com/random_joke')   
+        const data = await response.json();
+         document.getElementById('joke').innerHTML = `
+            <h1>${data.setup}</h1>
+            <p>${data.punchline}</p>
+         `;
+    }
+
+    
  </script>
 </html>
